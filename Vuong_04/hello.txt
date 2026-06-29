@@ -1,2 +1,4 @@
 Hello, this is a test file created by Vuong for testing push and merge conflicts in branch Vuong_04.
 Have a great day!
+
+Update: Testing creating Pull Request again from Vuong_04 to dev_testmerge.
