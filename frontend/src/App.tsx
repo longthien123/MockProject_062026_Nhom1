@@ -1,16 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
-import "./App.css";
+import { StaffingRatios } from './features/dashboard/staffing-ratios'
+import { SeverityPage } from "./features/incident-severity";
 import { LOCClassificationResult } from "./features/loc-classificaiton/components/loc-classification-result";
+import './App.css'
 
 function App() {
-  return (
-    <>
-      <LOCClassificationResult />
-    </>
-  );
+  return <SeverityPage />;
 }
-
 export default App;
