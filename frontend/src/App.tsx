@@ -1,10 +1,8 @@
-import { Login } from './features/auth/login'
-import './App.css'
+import { SeverityPage } from "./features/incident-severity";
+import "./App.css";
 
 function App() {
-  return (
-    <Login />
-  )
+  return <SeverityPage />;
 }
 
-export default App
+export default App;
