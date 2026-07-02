@@ -1,12 +1,11 @@
+import { NursingHomeDashboard } from './features/dashboard';
 import NewResidentPage from './features/resident/components/new-resindent-page'
-import './App.css'
+// import { Login } from './features/auth/login';
+
+import './App.css';
 
 function App() {
-  
-
-  return (
-    <NewResidentPage />
-  )
+  return <NursingHomeDashboard />;
 }
 
-export default App
+export default App;
