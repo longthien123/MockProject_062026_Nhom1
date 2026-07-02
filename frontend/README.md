@@ -156,7 +156,7 @@ Tập trung mọi cấu hình của ứng dụng vào một nơi duy nhất. Ví
 features/
 └── auth/                       # Ví dụ: tính năng Xác thực
     ├── components/             #   Component riêng cho tính năng này
-    │   ├── LoginForm.tsx       #     Form đăng nhập
+    │   ├── login-form.tsx       #     Form đăng nhập
     │   └── RegisterForm.tsx    #     Form đăng ký
     ├── hooks/                  #   Custom hooks riêng
     │   └── useLogin.ts         #     Hook xử lý logic đăng nhập
@@ -200,7 +200,7 @@ Chứa các component layout bọc ngoài các trang, định nghĩa bố cục 
 
 | Layout | Mô tả | Ví dụ sử dụng |
 |---|---|---|
-| `AuthLayout.tsx` | Layout cho trang xác thực: background gradient, form căn giữa | Trang đăng nhập, đăng ký |
+| `auth-layout.tsx` | Layout cho trang xác thực: background gradient, form căn giữa | Trang đăng nhập, đăng ký |
 | `DashboardLayout.tsx` | Layout có Header + Sidebar + vùng nội dung chính | Trang quản lý sau đăng nhập |
 | `MainLayout.tsx` | Layout cho trang công khai: Navbar + Footer | Landing page, Giới thiệu |
 
@@ -329,7 +329,7 @@ Chứa các hàm xử lý logic thuần túy (pure functions) — nhận đầu 
 | Loại | Quy tắc | Ví dụ |
 |---|---|---|
 | Thư mục | `kebab-case` | `elderly-management/`, `health-check/` |
-| Component file | `PascalCase` | `UserCard.tsx`, `LoginForm.tsx` |
+| Component file | `kebab-case` | `user-card.tsx`, `login-form.tsx` |
 | Hook file | `camelCase` bắt đầu bằng `use` | `useAuth.ts`, `useDebounce.ts` |
 | Hàm & biến | `camelCase` | `getUserInfo`, `isLoading`, `handleSubmit` |
 | Type & Interface | `PascalCase` | `User`, `ApiResponse`, `LoginRequest` |
