@@ -1,7 +1,8 @@
-import { IncidentListPage } from "./features/incident-list/pages/incident-list-page";
+import { NursingHomeDashboard } from './features/dashboard';
+import './App.css';
 
 function App() {
-  return <IncidentListPage />;
+  return <NursingHomeDashboard />;
 }
 
 export default App;
