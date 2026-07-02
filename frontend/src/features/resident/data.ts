@@ -1,0 +1,55 @@
+import type { Resident } from "./component/ui/resident-table";
+
+export const listResident: Resident[] = [
+  {
+    id: "1",
+    name: "Margaret Thompson",
+    room: "101-A",
+    status: "Active",
+    dob: "04/14/1999",
+    paperSource: "link",
+    gender: "Male",
+    administrate: "PlaceHolderthis",
+  },
+  {
+    id: "2",
+    name: "Margaret Thompson",
+    room: "101-A",
+    status: "Pending",
+    dob: "04/14/1999",
+    paperSource: "link",
+    gender: "Male",
+    administrate: "PlaceHolderthis",
+  },
+  {
+    id: "2",
+    name: "Margaret Thompson",
+    room: "101-A",
+    status: "Active",
+    dob: "04/14/1999",
+    paperSource: "link",
+    gender: "Male",
+    administrate: "PlaceHolderthis",
+  },
+
+  {
+    id: "2",
+    name: "Margaret Thompson",
+    room: "101-A",
+    status: "Discharged",
+    dob: "04/14/1999",
+    paperSource: "link",
+    gender: "Male",
+    administrate: "PlaceHolderthis",
+  },
+  {
+    id: "2",
+    name: "Margaret Thompson",
+    room: "101-A",
+    status: "Active",
+    dob: "04/14/1999",
+    paperSource: "link",
+    gender: "Male",
+    administrate: "PlaceHolderthis",
+  },
+];
