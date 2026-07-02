@@ -1,10 +1,7 @@
-import { Login } from './features/auth/login'
-import './App.css'
+import { IncidentListPage } from "./features/incident-list/pages/incident-list-page";
 
 function App() {
-  return (
-    <Login />
-  )
+  return <IncidentListPage />;
 }
 
-export default App
+export default App;
