@@ -1,9 +1,10 @@
-import { StaffingRatios } from './features/dashboard/staffing-ratios'
-import { SeverityPage } from "./features/incident-severity";
-import { LOCClassificationResult } from "./features/loc-classificaiton/components/loc-classification-result";
-import './App.css'
+import { NursingHomeDashboard } from './features/dashboard';
+// import { Login } from './features/auth/login';
+
+import './App.css';
 
 function App() {
-  return <SeverityPage />;
+  return <NursingHomeDashboard />;
 }
+
 export default App;
