@@ -1,9 +1,9 @@
-import { Login } from './features/auth/login'
+import { StaffingRatios } from './features/dashboard/staffing-ratios'
 import './App.css'
 
 function App() {
   return (
-    <Login />
+    <StaffingRatios />
   )
 }
 
