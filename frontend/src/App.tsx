@@ -1,8 +1,11 @@
-﻿import "./App.css"
-import { ActiveMedicationOrdersPage } from "./features/emar/components/active-medication-orders"
+import { NursingHomeDashboard } from './features/dashboard';
+import NewResidentPage from './features/resident/components/new-resindent-page'
+// import { Login } from './features/auth/login';
+
+import './App.css';
 
 function App() {
-  return <ActiveMedicationOrdersPage />
+  return <NursingHomeDashboard />;
 }
 
-export default App
+export default App;
