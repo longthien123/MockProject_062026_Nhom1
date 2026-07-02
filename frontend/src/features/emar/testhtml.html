@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Active Medication Orders - Direlda</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: '#2e47b8',
+            'on-primary': '#ffffff',
+            surface: '#f8f9fa',
+            'surface-dim': '#d9dadb',
+            'surface-container': '#f3f4f5',
+            'surface-container-low': '#f3f4f5',
+            'outline-variant': '#e0e0e0',
+            'on-surface-variant': '#44474e',
+            'error': '#ba1a1a',
+          },
+          borderRadius: {
+            'eight': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #f8f9fa;
+      color: #1a1c1e;
+    }
+    .card-shadow {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+    .active-tab {
+      background-color: #d9dadb;
+      color: #1a1c1e;
+      font-weight: 600;
+    }
+    .inactive-tab {
+      background-color: transparent;
+      color: #44474e;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+<!-- BEGIN: TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm bg-primary">
+<div class="flex justify-between items-center h-16 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="text-2xl font-bold flex items-center gap-2 text-on-primary"><span class="">Nursing Home</span></div>
+<nav class="hidden md:flex items-center gap-8 ml-auto"><a class="text-sm hover:text-primary transition-colors text-on-primary" href="#">Header</a><a class="text-sm hover:text-primary transition-colors text-on-primary" href="#">Header</a><a class="text-sm hover:text-primary transition-colors text-on-primary" href="#">Header</a><a class="text-sm hover:text-primary transition-colors text-on-primary" href="#">Header</a><a class="text-sm hover:text-primary transition-colors text-on-primary" href="#">Header</a></nav>
+
+</div>
+</header>
+<!-- END: TopNavBar -->
+<main class="pt-24 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-full lg:w-1/3 space-y-8">
+<!-- Section Title -->
+<div>
+<h1 class="text-2xl font-bold text-gray-900 leading-tight">
+            Active Medication Orders — <br>
+<span class="text-primary">Eleanor Rigby</span>
+</h1>
+</div>
+<!-- Resident Info Card -->
+<div class="bg-white p-6 rounded-eight card-shadow flex gap-4" data-purpose="resident-profile-card">
+<img alt="Resident Eleanor Rigby" class="w-24 h-24 rounded-eight object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI8ctwtw_TUHQB8Yomr5PtOGA3fFjNtAkyFq9r7yjGjDmx-LhySbebkoop_j1qH_SSqwslxJP9SZG4DGLjMIsK-Mf7C6Kqi9LVtQiOWV81iZQh4V1FnVTrNsY7K632M8Vlc6nt12NzZ_R-pebud9am5bVUKD_omoq2cBKV-6l8uj5w-7yNVvU64nstmpYJTsVUSdfLmMFu2bKO-aTJysqbjQ30BNxoa7G3vZgqckTezdR7vyQTlGh3">
+<div class="flex-1">
+<h2 class="font-bold text-lg">Eleanor Rigby</h2>
+<p class="text-sm text-on-surface-variant">DOB: 05/14/1938 (85y)</p>
+<p class="text-sm text-on-surface-variant">Room: 204-B</p>
+<p class="text-sm text-on-surface-variant">ID: #NH-99231</p>
+<div class="mt-2 flex flex-wrap gap-1">
+<span class="text-[10px] bg-red-100 text-red-700 px-2 py-0.5 rounded font-bold uppercase">Allergies</span>
+<span class="text-[10px] bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded font-bold uppercase">Fall Risk</span>
+</div>
+</div>
+</div>
+<!-- Search and Filter -->
+<div class="space-y-4">
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<input class="w-full pl-10 pr-12 py-3 bg-surface-container border-none rounded-eight focus:ring-2 focus:ring-primary text-sm" placeholder="Search by drug name..." type="text">
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-primary hover:text-blue-800">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: OrdersContent -->
+<section class="w-full lg:w-2/3">
+<!-- Tab Navigation -->
+<div class="flex bg-surface-container-low p-1 rounded-eight mb-6 w-full border border-outline-variant/30"><button class="flex-1 px-8 active-tab rounded-[6px] text-lg font-bold transition-all py-4">Active orders</button><button class="flex-1 px-8 inactive-tab rounded-[6px] text-lg font-semibold hover:bg-gray-200 transition-all py-4">Discontinued</button></div>
+<!-- Order Cards List -->
+<div class="space-y-4">
+<!-- Order Card 1 (With Allergy Alert) -->
+<div class="bg-white border border-outline-variant rounded-eight p-5 hover:border-primary transition-colors group cursor-pointer" data-purpose="medication-card">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg text-gray-900">Lisinopril (Zestril)</h3>
+<div class="flex items-center gap-3">
+<span class="bg-surface-dim text-xs font-semibold px-4 py-1 rounded-full">Active</span>
+<svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+<div class="text-sm text-on-surface-variant space-y-1 mb-4">
+<p class=""><strong>Dose:</strong> 10 mg | <strong>Route:</strong> Oral | <strong>Frequency:</strong> Once Daily</p>
+<p class=""><strong>Start:</strong> 08/12/2023 | <strong>Prescriber:</strong> Dr. Sarah Mitchell</p>
+</div>
+<!-- Allergy Alert Section -->
+<div class="bg-red-50 border-l-4 border-error p-3 rounded-r-eight flex items-start gap-3 mt-4">
+<svg class="w-5 h-5 text-error mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" fill-rule="evenodd"></path></svg>
+<div class="flex-1">
+<p class="text-error font-bold text-sm">Allergy conflict:</p>
+<p class="text-gray-700 text-sm">Patient has a documented sensitivity to ACE inhibitors. Review required.</p>
+</div>
+</div>
+</div>
+<!-- Order Card 2 (Expanded Example) -->
+<div class="bg-white border border-outline-variant rounded-eight p-5 hover:border-primary transition-colors group cursor-pointer" data-purpose="medication-card">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg text-gray-900">Metformin (Glucophage)</h3>
+<div class="flex items-center gap-3">
+<span class="bg-surface-dim text-xs font-semibold px-4 py-1 rounded-full">Active</span>
+<svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+<div class="text-sm text-on-surface-variant space-y-1 mb-4">
+<p class=""><strong>Dose:</strong> 500 mg | <strong>Route:</strong> Oral | <strong>Frequency:</strong> Twice Daily</p>
+<p class=""><strong>Start:</strong> 01/15/2024 | <strong>Prescriber:</strong> Dr. James Wilson</p>
+</div>
+<!-- Collapsible Detail Section -->
+<div class="bg-surface-container rounded-eight p-4 space-y-3">
+<div>
+<p class="text-xs font-bold text-gray-500 uppercase tracking-wider">Full prescription notes:</p>
+<p class="text-sm text-gray-700 mt-1">Administer with breakfast and dinner. Monitor blood glucose levels weekly. If patient experiences GI upset, switch to extended release version.</p>
+</div>
+<div class="pt-2 border-t border-gray-300">
+<p class="text-xs text-gray-600">Last administered timestamp: 05/20/2024, 08:00 AM</p>
+</div>
+</div>
+</div>
+<!-- Order Card 3 (Simple) -->
+<div class="bg-white border border-outline-variant rounded-eight p-5 hover:border-primary transition-colors group cursor-pointer" data-purpose="medication-card">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg text-gray-900">Atorvastatin (Lipitor)</h3>
+<div class="flex items-center gap-3">
+<span class="bg-surface-dim text-xs font-semibold px-4 py-1 rounded-full">Active</span>
+<svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+<div class="text-sm text-on-surface-variant space-y-1">
+<p class=""><strong>Dose:</strong> 20 mg | <strong>Route:</strong> Oral | <strong>Frequency:</strong> Nightly</p>
+<p class=""><strong>Start:</strong> 11/05/2023 | <strong>Prescriber:</strong> Dr. Sarah Mitchell</p>
+</div>
+</div>
+<!-- Order Card 4 (Simple) -->
+<div class="bg-white border border-outline-variant rounded-eight p-5 hover:border-primary transition-colors group cursor-pointer" data-purpose="medication-card">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-lg text-gray-900">Multivitamin (Adult Formula)</h3>
+<div class="flex items-center gap-3">
+<span class="bg-surface-dim text-xs font-semibold px-4 py-1 rounded-full">Active</span>
+<svg class="w-5 h-5 text-gray-400 group-hover:text-primary transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+<div class="text-sm text-on-surface-variant space-y-1">
+<p class=""><strong>Dose:</strong> 1 tab | <strong>Route:</strong> Oral | <strong>Frequency:</strong> Once Daily</p>
+<p class=""><strong>Start:</strong> 06/10/2023 | <strong>Prescriber:</strong> Dr. James Wilson</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: OrdersContent -->
+</div>
+</main>
+<!-- BEGIN: Footer -->
+
+<!-- END: Footer -->
+
+
+</body></html>
