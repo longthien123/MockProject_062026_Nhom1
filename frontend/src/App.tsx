@@ -1,15 +1,11 @@
-import "./App.css";
-import AppProviders from "./config/app-provider";
-import AppRouter from "./config/app-router";
+import { NursingHomeDashboard } from './features/dashboard';
+import NewResidentPage from './features/resident/components/new-resindent-page'
+// import { Login } from './features/auth/login';
+
+import './App.css';
 
 function App() {
-  return (
-    <>
-      <AppProviders>
-        <AppRouter></AppRouter>
-      </AppProviders>
-    </>
-  );
+  return <NursingHomeDashboard />;
 }
 
 export default App;
