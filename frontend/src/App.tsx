@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainLayout } from "./layouts/main-layout";
-import { UserManagementPage } from "./features/user/pages/user-management-page";
+import { UserManagementPage } from "./features/user/pages/user-list-page";
 import "./index.css";
 
 function App() {
