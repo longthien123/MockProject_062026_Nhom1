@@ -1,19 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MainLayout } from "./layouts/main-layout";
-import { UserManagementPage } from "./features/user/pages/user-list-page";
-import "./index.css";
+import { NursingHomeDashboard } from './features/dashboard';
+import './App.css';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<UserManagementPage />} />
-          <Route path="*" element={<UserManagementPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+  return <NursingHomeDashboard />;
 }
 
 export default App;
